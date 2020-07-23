@@ -278,7 +278,7 @@ if __name__ == "__main__":
         sys.exit(2)
         
     for opt, arg in opts:
-        if opt == '-h':
+        if opt in ("-h", "--help"):
             print('Pool_Covid19_Panther.py -s <input pool map file> -p <input pool results file> -o <mirth orders directory> -r <mirth results directory> -a <orders archive directory>')
             sys.exit()
         elif opt in ("-s", "--pm_file"):
@@ -300,10 +300,9 @@ if __name__ == "__main__":
         if not pd.isna(row["Source Sample Barcode"]):
             sampleToPool[str(row["Source Sample Barcode"]).split(".")[0]] = str(row["Pooled Sample Barcode"]).split(".")[0]
 
-    #print("sample to pool = {}".format(sampleToPool))
     results_df = pd.read_csv(INPUT_POOL_RESULTS_FILE, sep='\t')
     pool_results = {}
-    #print("results_df = {}".format(results_df))
+
     for i, row in results_df.iterrows():
         if row["Specimen Barcode"] in sampleToPool.values():
             if int(row["Interpretation 1"]) < RLU_NOMINAL_SCORE:
@@ -312,7 +311,6 @@ if __name__ == "__main__":
                 flag = "HIGH"
             pool_results[row["Specimen Barcode"]] = [row["Run ID"], row["Interpretation 2"], row["Interpretation 3"], row["Interpretation 1"], flag]
 
-    #print("poolresults = {}".format(pool_results))
     #contains results corresponding to each containerId
     sampleToResult = {}
     for i, row in df.iterrows():
