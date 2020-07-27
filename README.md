@@ -21,13 +21,7 @@
 * python3 Pool_Covid19_Panther.py -s <sample_to_pool_mapping_file> -p<pool_results_file> -o<path_to_orders_dir> -r<path_to_results_dir> -a<path_to_archives_dir>
 * Give python3 Pool_Covid19_Panther.py -h for help.
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Dr. Srikar Chamala
+* Pathology Lab, University of Florida
