@@ -38,6 +38,11 @@
 		* Interpretation2 - If the value is "valid", it means the test has been conducted succesfully for this pool. Otherwise, it reports "Invalid".
 		* Interpretation3 - This columns gives the actual result of the test for this pool. It gives either "Positive" or "Negative" if the pool is tested positve or negative correspondingly.
 
+### What is the output? ###
+* After interpreting all the pool results, an output excel file is generated with detailed information for all the samples.
+* It starts with the sample ID, pool ID to which this sample is associated, result for the sample, and says if the sample results are uploaded to EPIC or not.
+* If the pool is tested Negative, then all the associated samples' results are uploaded to EPIC. Otherwise, they are not uploaded at this time.
+
 ### How do I run this? ###
 
 * Download the source code from the repository
