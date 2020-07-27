@@ -1,6 +1,6 @@
 # README #
 ### What is this repository for? ###
-* This project reads the sample to pool mappings from Hamilton and pool results for COVID-19 from Panther, analyzes the negative samples and results the negative resulted samples to EPIC.
+* This project reads the sample to pool mapping file from Hamilton and pool results file from Panther System, analyzes the negative samples and results the negative resulted samples to EPIC.
 
 ### How is this approach benifited? ###
 * With the rising in COVID-19 cases, the usage of test resources and time taken for the result is also increasing constantly. Here at the University of Florida, after analysing the number of 
