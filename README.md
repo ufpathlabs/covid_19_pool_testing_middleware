@@ -30,7 +30,7 @@
 	* Gives us the mapping of each sample to a pool. Using this file, we interpret the results of each sample based on the pool result to which the sample is associated with.
 		* Pooled Sample Barcode - The barcode ID of the pools.
 		* Source Sample Barcode - The barcode ID of each samples.
-* Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis.xls
+* Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis
 	* Gives the results of the pools that are tested for.
 	* The columns from this file that we use are:
 		* Specimen Barcode - The pool barcode ID. It is the same ID that is used in the Pool_Map file to map samples to a pool.
