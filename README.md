@@ -53,6 +53,7 @@
 * Give python3 Pool_Covid19_Panther.py -h for help.
 
 ### Workflow ###
+<img src="COVID_19_Pooling_WorkFlow_V1.png" width="100">
 ![workflow image](COVID_19_Pooling_WorkFlow_V1.png =50x50)
 
 ### Who do I talk to? ###
