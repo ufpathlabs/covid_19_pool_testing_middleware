@@ -52,6 +52,9 @@
 * python3 Pool_Covid19_Panther.py -s <sample_to_pool_mapping_file> -p<pool_results_file> -o<path_to_orders_dir> -r<path_to_results_dir> -a<path_to_archives_dir>
 * Give python3 Pool_Covid19_Panther.py -h for help.
 
+### Workflow ###
+![workflow image](COVID_19_Pooling_WorkFlow_V1.png)
+
 ### Who do I talk to? ###
 
 * Dr. Srikar Chamala
