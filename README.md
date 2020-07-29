@@ -59,4 +59,6 @@
 
 * Dr. Srikar Chamala
 * Pathology Lab, University of Florida
-* [![Foo](https://chamalalab.org/wp-content/uploads/2020/07/thumbnail_LOGO-BLCK.png)](http://chamalalab.org/)
+
+
+[![Foo](https://chamalalab.org/wp-content/uploads/2020/07/thumbnail_LOGO-BLCK.png)](http://chamalalab.org/)
