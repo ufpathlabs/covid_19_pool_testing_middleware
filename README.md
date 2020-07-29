@@ -58,7 +58,7 @@
 ### Who do I talk to? ###
 
 * Dr. Srikar Chamala
-* Pathology Lab, University of Florida
+* Dept. of Pathology, Immunology and Laboratory Medicine, University of Florida
 * schamala@ufl.edu | [chamalalab.org](https://chamalalab.org/)
 
 
