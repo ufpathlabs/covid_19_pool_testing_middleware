@@ -11,6 +11,9 @@
   So, 20 pools are formed for the 100 samples and we test only these 20 pools. 
 * If some of the pools are resulted positive, we test each sample in the pool individually. As the number of positive cases are less than 4% in total, we end up doing 40 tests at the maximum instead of 100.
 
+### Overall Workflow ###
+![workflow image](COVID_19_Pooling_WorkFlow_V1.png)
+
 ### How are the results interpreted? ###
 * After reading the pool results file from the Hologic Panther System, if a pool result is "valid"(column - Interpretation 2), "Negative"(column - Interpretation 3), and has its RLU Score less than 350
   (column - Interpretation 1), we categorize the pool result as Negative. The samples associated with this pool are also categorized "Negative" and these results are processed and uploaded to EPIC(EHR System).
@@ -52,13 +55,10 @@
 * python3 Pool_Covid19_Panther.py -s <sample_to_pool_mapping_file> -p<pool_results_file> -o<path_to_orders_dir> -r<path_to_results_dir> -a<path_to_archives_dir>
 * Give python3 Pool_Covid19_Panther.py -h for help.
 
-### Workflow ###
-![workflow image](COVID_19_Pooling_WorkFlow_V1.png)
-
 ### Who do I talk to? ###
 
 * Dr. Srikar Chamala
 * Pathology Lab, University of Florida
 
 
-[![Foo](https://chamalalab.org/wp-content/uploads/2020/07/thumbnail_LOGO-BLCK.png)](http://chamalalab.org/)
+[![Logo](Logo.png)](http://chamalalab.org/)
