@@ -1,15 +1,18 @@
 # README #
-### What is this repository for? ###
-* This project reads the sample to pool mapping file from Hamilton and pool results file from Panther System, analyzes the negative samples and results the negative resulted samples to EPIC.
+### Project Overview ###
+* This repository provides a script for the deconvolution of pooled COVID-19 samples run on a Hologic Panther system from samples prepared on a Hamilton NGS Star system. This script also provides the tools to result all negative pooled samples directly into EPIC EMR system. Any pools that are positive are not resulted.
+* This project reads the sample to pool mapping file from Hamilton and pool results file from Panther System, analyzes the negative samples and results the negative resulted samples to EPIC
 
-### How is this approach benifited? ###
-* With the rising in COVID-19 cases, the usage of test resources and time taken for the result is also increasing constantly. Here at the University of Florida, after analysing the number of 
-  positive cases among the total number of tests conducted, we came up with this approach to effectively employ the test resources and reduce the turn around time for the results.
-* Based on the analysis, we identified that, it is only around 3 or 4 cases tested positive out of 100 tests conducted. So, we decided to put multiple samples into a single pool and test the pool 
-  instead of testing all the samples individually.
-* For example, consider there are 100 samples to be tested. If we test each sample individually, that is going to take 100 tests and slow down the process. Instead, we form a pool with 5 samples.
-  So, 20 pools are formed for the 100 samples and we test only these 20 pools. 
-* If some of the pools are resulted positive, we test each sample in the pool individually. As the number of positive cases are less than 4% in total, we end up doing 40 tests at the maximum instead of 100.
+### Will this benefit if I am not using Hamilton and Panther System? ###
+* The approach presented here is an example based on Hamilton and Panther systems. However, similar methodology can be easily adopted for integrating other systems by modifying this python code or writing new code.
+
+### What is the benefit of this approach? ###
+* With the rise in COVID-19 cases, the usage of test resources is increasing constantly. Due to this increase and sudden demand for testing, there is a worldwide shortage of testing resources and delays in almost every aspect of supply chains for COVID reagents. Here at the University of Florida, there was a demand for return to work COVID-19 screening in a large asymptomatic population. To accommodate this demand and conserve testing materials, samples were pooled in order to achieve both goals.
+* Sample pooling allows multiple samples to be tested using fewer testing resources by pooling multiple samples together to be tested at one time. Samples from multiple individuals are tested in a pool using one test, rather than running each individual sample on its own test. If the pool is positive, it means that one or more of the individuals tested in that pool may be infected, so each of the samples in that pool are tested again individually. If a Pool sample is Negative, then all individual samples are resulted as negative and no repeat testing is required. Because the samples are pooled, fewer testing supplies are used and more tests can be run at the same time. This testing strategy is most efficient in areas with low prevalence, meaning most results are expected to be negative.
+* Pooling on the Hamilton NGS Star system is able to accommodate a pool size of 2 to 10 samples. This allows for flexibility as the percent positivity increases or decreases in in the sample population. As the percent positivity increases in a population the pool size should be reduced to reduce the number of repeat testing that is required due to positive pools.
+* Individual samples are barcoded and placed onto the deck of the Hamilton NGS Star. A unique barcoded label also needs to be generated for each pool sample. For example, if you are pooling 1 to 5 and are testing 100 individuals, you would need 20 uniquely labeled pool tubes. To run the pool samples on the Hologic Panther system, the labeled Pool tubes are Hologic Specimen Lysis tubes. The 20 pool lysis tubes are placed onto the deck of the Hamilton NGS Star. The transfer program is run and equal amounts of sample is transferred from the primary sample tube to the target pool lysis tube. In the case of the Hologic Panther system a total sample volume of 500uL is added to the pool lysis tubes. For a 1 to 5 pool, 100uL of each sample is added to the target lysis pool tube.
+* When the transfer program is complete, an excel file is generated that contains the original sample, the pool it was transferred to and the volume that was transferred to the target lysis pool tube.
+* The pool lysis tubes are transferred to the Hologic Panther system and run per the manufactures instructions. When completed, the results are exported from the panther system as a .LIS file.
 
 ### Overall Workflow ###
 ![workflow image](COVID_19_Pooling_WorkFlow_V1.png)
