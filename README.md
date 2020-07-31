@@ -45,9 +45,24 @@
 		* Interpretation3 - This columns gives the actual result of the test for this pool. It gives either "Positive" or "Negative" if the pool is tested positve or negative correspondingly.
 
 ### What is the output? ###
-* After interpreting all the pool results, an output excel file is generated with detailed information for all the samples.
+* After interpreting all the pool results, an output excel file, TST_FINAL.xlsx is generated with detailed information for all the samples.
 * It starts with the sample ID, pool ID to which this sample is associated, result for the sample, and says if the sample results are uploaded to EPIC or not.
 * If the pool is tested Negative, then all the associated samples' results are uploaded to EPIC. Otherwise, they are not uploaded at this time.
+* hl7-pooled-COVID_19-100004162-output.txt - In the output HL7 message, the result is added in the OBX_18 segment.
+
+		MSH|^~\&|IM|87380||1230600115|20200707131123||ORU^R01|6.373058828372929e+17|P|2.4|||||||||||
+		PID|1||32^^^^||1^SAMPLE^^|||||||||||||||||
+		PV1|||||||||||||||||||
+		ORC|RE|PLMO20-001480|PLMO20-001480||||^^^^^R^^||||||||||||||||
+		OBR|1|PLMO20-001480|100004162^|12350000^SARS-CoV-2, NAA UFHPL MOLECULAR|||20200626100800||||Lab Collect||||Universal Tr&Universal Transport Media (UTM)^^^NasoPharynx&NasoPharynx|||||||20200707131123|||P||^^^^^R^^||
+		NTE|1|L|This test was developed and its performance characteristics determined by the University of Florida Health Pathology Laboratories (UF Health PathLabs) Laboratories. The assay was validated to allow for pooled sample testing.
+		NTE|2|L|This test has not been FDA cleared or approved. This test has been authorized by FDA under an Emergency Use Authorization (EUA).
+		NTE|3|L|This test has been validated in accordance with the FDA's Guidance Document "Policy for Diagnostics Testing in Laboratories Certified to Perform High Complexity Testing under to Emergency Use Authorization for Coronavirus Disease-2019 during the Public Health Emergency" issued on February 29th, 2020. FDA independent review of this validation is pending.
+		NTE|4|L|This test is only authorized for the duration of time the declaration that circumstances exist justifying the authorization of the emergency use of in vitro diagnostic tests for detection of SARS-CoV-2 virus and/or diagnosis of COVID-19 infection under section 564(b)(1) of the Act, 21U.S.C. 360bbb-3(b)(1), unless the authorization is terminated or revoked sooner.
+		NTE|5|L|The results of this test are not intended to be used as the sole means for clinical diagnosis and/ or patient management decisions.
+		NTE|6|L|UFHealth PathLabs is authorized under Clinical Laboratory Improvement Amendments (CLIA) to perform high-complexity testing. Testing performed at UF Health PathLabs 4800 SW 35th Drive, Gainesville, FL 32608.
+		NTE|7|L|
+		OBX|1|ST|12350000^SARS-COV-2, NAA|12350000|Not Detected||-||||P|||20200707131123|||123648|UFHPL Panther2|20200707131123
 
 ### How do I run this? ###
 
