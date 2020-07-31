@@ -48,7 +48,7 @@
 * After interpreting all the pool results, an output excel file, TST_FINAL.xlsx is generated with detailed information for all the samples.
 * It starts with the sample ID, pool ID to which this sample is associated, result for the sample, and says if the sample results are uploaded to EPIC or not.
 * If the pool is tested Negative, then all the associated samples' results are uploaded to EPIC. Otherwise, they are not uploaded at this time.
-* hl7-pooled-COVID_19-100004162-output.txt - In the output HL7 message, the result is added in the OBX_18 segment.
+* hl7-pooled-COVID_19-100004162-output.txt - In the output HL7 message, the result is added in the OBX segment.
 
 		MSH|^~\&|IM|87380||1230600115|20200707131123||ORU^R01|6.373058828372929e+17|P|2.4|||||||||||
 		PID|1||32^^^^||1^SAMPLE^^|||||||||||||||||
