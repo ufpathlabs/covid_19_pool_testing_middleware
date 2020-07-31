@@ -55,8 +55,8 @@
 * Generate the needed input files (refer the sample files in the repository).
 * Note down the source paths for the mirth folders.
 * Run the python script as below:
-* python3 Pool_Covid19_Panther.py -s <sample_to_pool_mapping_file> -p<pool_results_file> -o<path_to_orders_dir> -r<path_to_results_dir> -a<path_to_archives_dir>
-* Give python3 Pool_Covid19_Panther.py -h for help.
+
+		python3 Pool_Covid19_Panther.py -s Hamilton_NGS_STAR_TST_SAMPLE_POOL_MAP.xlsx -p Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
 
 ### Who do I talk to? ###
 
