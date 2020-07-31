@@ -17,11 +17,30 @@
 ### Overall Workflow ###
 ![workflow image](COVID_19_Pooling_WorkFlow_V1.png)
 
-### How are the results interpreted? ###
-* After reading the pool results file from the Hologic Panther System, if a pool result is "valid"(column - Interpretation 2), "Negative"(column - Interpretation 3), and has its RLU Score less than 350
-  (column - Interpretation 1), we categorize the pool result as Negative. The samples associated with this pool are also categorized "Negative" and these results are processed and uploaded to EPIC(EHR System).
-* Otherwise, the pool is categorized as "Positive". The samples associated with this pool are tested individually and the results are processed and uploaded to EPIC. 
+### How are the results interpreted and reported? ###
+* At UF Health, clinical laboratory testing results are interfaced with EPIC Beaker to the NextGen Connect Integration Engine (Formerly MirthConnect), which pushes the results into Beaker.
 
+* Step A. As shown in the above figure, as soon as COVID-19 test is ordered and a specimen is collected below two events happen, 
+	
+	* (A.1.) Test order shows up on the pathology lab worklist in Epic Beaker LIS.
+	
+	* (A.2.) We configured our electronic interface software EPIC Bridges and NextGen Connect for simultaneously sending an order HL7 message to a network folder.  This HL7 file contains information related to the patient, test order, specimen ID, and empty test result line. See example outgoing HL7 files in "Input_Files/Incoming_HL7" folder.
+
+* Step B. Our middleware script ("COVID19_Pool_Testing_Panther.py") will automatically do the following, 
+	
+	* (B.1.) After reading the pool results file from the Hologic Panther System (e.g., "Panther_POOL_RESULTS.lis.xls") we categorize the pool result as "Negative" if below criteria is met else as "Positive". It is to be noted that Panther output file contain only Pool ID not the original Sample IDs.
+		* column "Interpretation 1" is less than 350 (its relative light unit - RLU Score) AND 
+		* column "Interpretation 2" is "valid" AND 
+		* column "Interpretation 3" is " Negative" 
+	
+	* (B.2.) The samples associated with "Negative" pools are also categorized as "Negative". Sample IDs are retrieved by linking "Specimen Barcode" column (which is a pool sample ID) in "Panther_POOL_RESULTS.lis" with "Pooled Sample Barcode" column in "Hamilton_SAMPLE_POOL_MAP.xlsx" file.
+	
+	* (B.3.) All "Negative” sample results are reported back to EPIC Beaker. This is done by detecting corresponding incoming HL7 order message file based on the sample ID, and inserting a result value (as "Not Detected" to OBX record) into the HL7 message generating outgoing HL7 message. Outgoing HL7 message will be appended with test protocol description to NTE record that appears in the comment box in EPIC Beaker. This outgoing HL7 message is placed on the network drive. See example outgoing HL7 files in "Output_Files/Result_HL7" folder.
+	
+	* (B.4.) Samples corresponding to "Positive" pools (from B.1) will not be generating any outgoing HL7 files. Thus, results for these samples are reported to EPIC Beaker but will be re-tested individually because at least one sample in that pool is positive.
+
+* Step C. Outgoing HL7 messages generated above (B.3) are automatically picked up by NextGen Connect and pushed into Epic Beaker.
+		
 ### What do I need to run this? ###
 * python 3 or above installed.
 * The input arguments needed are as follows:
@@ -32,11 +51,11 @@
 	* -a <mirth archive directory> - directory path of the archives where ordered messages are moved after resulting it.
 
 ### What do the input files mean? ###
-* Hamilton_NGS_STAR_TST_SAMPLE_POOL_MAP.xlsx
+* Hamilton_SAMPLE_POOL_MAP.xlsx
 	* Gives us the mapping of each sample to a pool. Using this file, we interpret the results of each sample based on the pool result to which the sample is associated with.
 		* Pooled Sample Barcode - The barcode ID of the pools.
 		* Source Sample Barcode - The barcode ID of each samples.
-* Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis
+* Panther_POOL_RESULTS.lis.xls
 	* Gives the results of the pools that are tested for.
 	* The columns from this file that we use are:
 		* Specimen Barcode - The pool barcode ID. It is the same ID that is used in the Pool_Map file to map samples to a pool.
@@ -71,11 +90,12 @@
 * Note down the source paths for the mirth folders.
 * Run the python script as below:
 
-		python3 Pool_Covid19_Panther.py -s Hamilton_NGS_STAR_TST_SAMPLE_POOL_MAP.xlsx -p Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
+		python3 COVID19_Pool_Testing_Panther.py -s Hamilton_NGS_STAR_TST_SAMPLE_POOL_MAP.xlsx -p Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
 
 ### Who do I talk to? ###
 
 * Dr. Srikar Chamala
+* Director Biomedical Informatics
 * Department of Pathology, Immunology and Laboratory Medicine, University of Florida
 * schamala@ufl.edu | [chamalalab.org](https://chamalalab.org/)
 
