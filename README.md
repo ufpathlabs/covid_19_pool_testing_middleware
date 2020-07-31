@@ -90,7 +90,7 @@
 * Note down the source paths for the mirth folders.
 * Run the python script as below:
 
-		python3 COVID19_Pool_Testing_Panther.py -s Hamilton_NGS_STAR_TST_SAMPLE_POOL_MAP.xlsx -p Hologic_Panther_System_TST_SAMPLE_POOL_RESULTS.lis -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
+		python3 COVID19_Pool_Testing_Panther.py -s Hamilton_SAMPLE_POOL_MAP.xlsx -p Panther_POOL_RESULTS.lis.xls -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
 
 ### Who do I talk to? ###
 
