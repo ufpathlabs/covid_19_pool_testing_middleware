@@ -29,13 +29,13 @@
 * Step B. Our middleware script ("COVID19_Pool_Testing_Panther.py") will automatically do the following, 
 	
 	* (B.1.) After reading the pool results file from the Hologic Panther System (e.g., "Panther_POOL_RESULTS.lis.xls") we categorize the pool result as "Negative" if below criteria is met else as "Positive". It is to be noted that Panther output file contain only Pool ID not the original Sample IDs.
-		* column "Interpretation 1" is less than 350 (its relative light unit - RLU Score) AND 
+		* column "Interpretation 1" is less than 325 (its relative light unit - RLU Score) AND 
 		* column "Interpretation 2" is "valid" AND 
 		* column "Interpretation 3" is " Negative" 
 	
 	* (B.2.) The samples associated with "Negative" pools are also categorized as "Negative". Sample IDs are retrieved by linking "Specimen Barcode" column (which is a pool sample ID) in "Panther_POOL_RESULTS.lis" with "Pooled Sample Barcode" column in "Hamilton_SAMPLE_POOL_MAP.xlsx" file.
 	
-	* (B.3.) All "Negative‚Äù sample results are reported back to EPIC Beaker. This is done by detecting corresponding incoming HL7 order message file based on the sample ID, and inserting a result value (as "Not Detected" to OBX record) into the HL7 message generating outgoing HL7 message. Outgoing HL7 message will be appended with test protocol description to NTE record that appears in the comment box in EPIC Beaker. This outgoing HL7 message is placed on the network drive. See example outgoing HL7 files in "Output_Files/Result_HL7" folder.
+	* (B.3.) All "Negative° sample results are reported back to EPIC Beaker. This is done by detecting corresponding incoming HL7 order message file based on the sample ID, and inserting a result value (as "Not Detected" to OBX record) into the HL7 message generating outgoing HL7 message. Outgoing HL7 message will be appended with test protocol description to NTE record that appears in the comment box in EPIC Beaker. This outgoing HL7 message is placed on the network drive. See example outgoing HL7 files in "Output_Files/Result_HL7" folder.
 	
 	* (B.4.) Samples corresponding to "Positive" pools (from B.1) will not be generating any outgoing HL7 files. Thus, results for these samples are reported to EPIC Beaker but will be re-tested individually because at least one sample in that pool is positive.
 
