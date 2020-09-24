@@ -2,12 +2,12 @@ MSH|^~\&|IM|87380||1230600115|20200707131124||ORU^R01|6.373058828449271e+17|P|2.
 PID|1||37^^^^||6^SAMPLE^^|||||||||||||||||
 PV1|||||||||||||||||||
 ORC|RE|PLMO20-001510|PLMO20-001510||||^^^^^R^^||||||||||||||||
-OBR|1|PLMO20-001510|100004192^|12350000^SARS-CoV-2, NAA UFHPL MOLECULAR|||20200626101100||||Lab Collect||||Universal Tr&Universal Transport Media (UTM)^^^NasoPharynx&NasoPharynx|||||||20200707131124|||P||^^^^^R^^||
-NTE|1|L|This test was developed and its performance characteristics determined by the University of Florida Health Pathology Laboratories (UF Health PathLabs) Laboratories. The assay was validated to allow for pooled sample testing.
+OBR|1|PLMO20-001510|100004192^|12350000^SARS-CoV-2, NAA UPL MOLECULAR|||20200626101100||||Lab Collect||||Universal Tr&Universal Transport Media (UTM)^^^NasoPharynx&NasoPharynx|||||||20200707131124|||P||^^^^^R^^||
+NTE|1|L|This test was developed and its performance characteristics determined by the XXX Laboratories. The assay was validated to allow for pooled sample testing.
 NTE|2|L|This test has not been FDA cleared or approved. This test has been authorized by FDA under an Emergency Use Authorization (EUA).
 NTE|3|L|This test has been validated in accordance with the FDA's Guidance Document "Policy for Diagnostics Testing in Laboratories Certified to Perform High Complexity Testing under to Emergency Use Authorization for Coronavirus Disease-2019 during the Public Health Emergency" issued on February 29th, 2020. FDA independent review of this validation is pending.
 NTE|4|L|This test is only authorized for the duration of time the declaration that circumstances exist justifying the authorization of the emergency use of in vitro diagnostic tests for detection of SARS-CoV-2 virus and/or diagnosis of COVID-19 infection under section 564(b)(1) of the Act, 21U.S.C. 360bbb-3(b)(1), unless the authorization is terminated or revoked sooner.
 NTE|5|L|The results of this test are not intended to be used as the sole means for clinical diagnosis and/ or patient management decisions.
-NTE|6|L|UFHealth PathLabs is authorized under Clinical Laboratory Improvement Amendments (CLIA) to perform high-complexity testing. Testing performed at UF Health PathLabs 4800 SW 35th Drive, Gainesville, FL 32608.
+NTE|6|L|XXX is authorized under Clinical Laboratory Improvement Amendments (CLIA) to perform high-complexity testing. Testing performed at XXX, XXX, XXX.
 NTE|7|L|
 OBX|1|ST|12350000^SARS-COV-2, NAA|12350000|Not Detected||-||||P|||20200707131124|||123648|UFHPL Panther2|20200707131124

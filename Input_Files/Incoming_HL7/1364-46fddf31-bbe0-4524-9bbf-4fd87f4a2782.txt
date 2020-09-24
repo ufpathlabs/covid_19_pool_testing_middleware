@@ -2,5 +2,5 @@ MSH|^~\&|IM|87380||1230600115|20200626100916|NEWKIM|ORM^O01|2313|P|2.4||||||||||
 PID|1||33^^^^||2^SAMPLE^^|||||||||||||||||
 PV1|||||||||||||||||||
 ORC|NW|PLMO20-001486|PLMO20-001486||||^^^^^R^^||||||||||||||||
-OBR|1|PLMO20-001486|100004168^|12350000^SARS-CoV-2, NAA UFHPL MOLECULAR|||20200626100900||||Lab Collect||||Universal Tr&Universal Transport Media (UTM)^^^NasoPharynx&NasoPharynx||||||||||||^^^^^R^^||
+OBR|1|PLMO20-001486|100004168^|12350000^SARS-CoV-2, NAA UPL MOLECULAR|||20200626100900||||Lab Collect||||Universal Tr&Universal Transport Media (UTM)^^^NasoPharynx&NasoPharynx||||||||||||^^^^^R^^||
 OBX|1|ST|12350000^SARS-COV-2, NAA|12350000|||-||||P||||||123648|GENOME
