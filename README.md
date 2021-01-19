@@ -42,7 +42,7 @@
 
 * Step C. Outgoing HL7 messages generated above (B.3) are automatically picked up by NextGen Connect and pushed into Epic Beaker.
 		
-### What do I need to run this? ###
+### Prerequisites ###
 * python 3 or above installed.
 * The input arguments needed are as follows:
 	* -s <sample to pool mapping file> - path to an excel file(.xlsx) that contains the sample to pool mapping information.
@@ -84,7 +84,7 @@
 		NTE|7|L|
 		OBX|1|ST|12350000^SARS-COV-2, NAA|12350000|Not Detected||-||||P|||20200707131123|||123648|UFHPL Panther2|20200707131123
 
-### How do I run this? ###
+### Running the program ###
 
 * Download the source code from the repository
 * Generate the needed input files (refer the sample files in the repository).
@@ -93,7 +93,7 @@
 
 		python3 COVID19_Pool_Testing_Panther.py -s Hamilton_SAMPLE_POOL_MAP.xlsx -p Panther_POOL_RESULTS.lis.xls -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
 
-### Who do I talk to? ###
+### Authors ###
 
 * Dr. Srikar Chamala
 * Director Biomedical Informatics
