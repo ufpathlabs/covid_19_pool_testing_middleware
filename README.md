@@ -43,13 +43,9 @@
 * Step C. Outgoing HL7 messages generated above (B.3) are automatically picked up by NextGen Connect and pushed into Epic Beaker.
 		
 ### Prerequisites ###
-* python 3 or above installed.
-* The input arguments needed are as follows:
-	* -s <sample to pool mapping file> - path to an excel file(.xlsx) that contains the sample to pool mapping information.
-	* -p <pool results file> - path to the results file which contains the result information of all the pools that are tested.
-	* -o <mirth orders directory> - directory path for the HL7 incoming messages.
-	* -r <mirth results directory> - directory path for the resulting HL7 messages.
-	* -a <mirth archive directory> - directory path of the archives where ordered messages are moved after resulting it.
+* Python 3 or above installed.
+* Below list of python packages to be installed:
+	- 
 
 ### What do the input files mean? ###
 * Hamilton_SAMPLE_POOL_MAP.xlsx
@@ -92,7 +88,12 @@
 * Run the python script as below:
 
 		python3 COVID19_Pool_Testing_Panther.py -s Hamilton_SAMPLE_POOL_MAP.xlsx -p Panther_POOL_RESULTS.lis.xls -o /Input_Files/Incoming_HL7/ -r /Output_Files/Result_HL7/ -a /Input_Files/Orders_Archive/
-
+* The input arguments needed are as follows:
+	* -s <sample to pool mapping file> - path to an excel file(.xlsx) that contains the sample to pool mapping information.
+	* -p <pool results file> - path to the results file which contains the result information of all the pools that are tested.
+	* -o <mirth orders directory> - directory path for the HL7 incoming messages.
+	* -r <mirth results directory> - directory path for the resulting HL7 messages.
+	* -a <mirth archive directory> - directory path of the archives where ordered messages are moved after resulting it.
 ### Authors ###
 
 * Dr. Srikar Chamala
