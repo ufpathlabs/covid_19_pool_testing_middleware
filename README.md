@@ -45,7 +45,19 @@
 ### Prerequisites ###
 * Python 3 or above installed.
 * Below list of python packages to be installed:
-	- 
+	- requests (>= 2.6.0)
+	- numpy    (>= 1.19.4)
+	- pandas   (>= 1.1.4)
+	- hl7      (>= 0.4.1)
+	- datetime (>= 4.3)
+	- filelock (>= 3.0.12)
+	- pytest-shutil (>= 1.7.0)
+	- PyYAML   (>= 5.4)
+	- mysqlclient (>= 2.0.3)
+	- pathlib (>= 1.0.1)
+
+### Environment ###
+* This program can simply be run on any environment having the above prerequisites installed. However to run batch jobs or automate the process via cronjobs Linux environment is preferred.
 
 ### What do the input files mean? ###
 * Hamilton_SAMPLE_POOL_MAP.xlsx
