@@ -57,7 +57,7 @@
 	- pathlib (>= 1.0.1)
 
 ### Environment ###
-* This program can simply be run on any environment having the above prerequisites installed. However to run batch jobs or automate the process via cronjobs Linux environment is preferred.
+* This program can simply be run on any environment having the above prerequisites installed. However to run batch jobs or to automate the process via cronjobs, Linux environment is preferred.
 
 ### What do the input files mean? ###
 * Hamilton_SAMPLE_POOL_MAP.xlsx
@@ -106,6 +106,7 @@
 	* -o <mirth orders directory> - directory path for the HL7 incoming messages.
 	* -r <mirth results directory> - directory path for the resulting HL7 messages.
 	* -a <mirth archive directory> - directory path of the archives where ordered messages are moved after resulting it.
+
 ### Authors ###
 
 * Dr. Srikar Chamala
