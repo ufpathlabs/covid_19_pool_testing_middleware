@@ -87,7 +87,7 @@
 ### Running the program ###
 
 * Clone the repository and move inside the directory.
-* Generate the needed input files (refer the sample files in the repository).
+* Generate the needed input files and place them inside the Input_Files directory (refer the sample files in the repository).
 * Note down the source paths for the mirth folders.
 * Run the python script as below:
 
