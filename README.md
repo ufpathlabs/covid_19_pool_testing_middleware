@@ -53,8 +53,8 @@
 	- filelock (>= 3.0.12)
 	- pytest-shutil (>= 1.7.0)
 	- PyYAML   (>= 5.4)
-	- mysqlclient (>= 2.0.3)
 	- pathlib (>= 1.0.1)
+	- xlrd     (>= 1.2.0)
 
 ### Environment ###
 * This program can simply be run on any environment having the above prerequisites installed. However to run batch jobs or to automate the process via cronjobs, Linux environment is preferred.
@@ -116,3 +116,6 @@
 
 
 [![Logo](Logo.png)](http://chamalalab.org/)
+
+### License and Limitations ###
+* Software is available for use under MIT License.
