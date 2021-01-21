@@ -57,7 +57,7 @@
 	- xlrd     (>= 1.2.0)
 
 ### Environment ###
-* This program can simply be run on any environment having the above prerequisites installed. However to run batch jobs or to automate the process via cronjobs, Linux environment is preferred.
+* This program can be run on any environment having the above prerequisites installed. However to run batch jobs or to automate the process via cronjobs, Linux environment is preferred.
 
 ### What do the input files mean? ###
 * Hamilton_SAMPLE_POOL_MAP.xlsx
