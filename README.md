@@ -118,4 +118,4 @@
 [![Logo](Logo.png)](http://chamalalab.org/)
 
 ### License and Limitations ###
-* Software is available for use under ![MIT License.](LICENSE.txt)
+* Software is available for use under [MIT License.](https://bitbucket.org/srikarchamala/covid_19_pool_testing_middleware/src/b0a602447f5bd18285650a0e7687c57d4c1dcbbb/LICENSE.txt)
