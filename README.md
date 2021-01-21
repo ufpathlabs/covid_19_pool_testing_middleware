@@ -118,4 +118,4 @@
 [![Logo](Logo.png)](http://chamalalab.org/)
 
 ### License and Limitations ###
-* Software is available for use under MIT License.
+* Software is available for use under ![MIT License.](LICENSE.txt)
